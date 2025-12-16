@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Original Surfer;
+}
+
+li {
+    margin: 0 15px;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+.main-navbar {
+    background-color: #f6e9d7;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+}
+
+.button-navbar {
+    background-color: #f6e9d7;
+    border-color: #38291b;
+}
+
+.navbar-mobile {
+    padding-left: 5%; 
+    padding-right: 5%;
+}
+
+.logo-header {
+    max-height: 50px;
+    width: auto;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1rem;
+    color: #38291b;
+}
+
+@media (max-width: 998px) {
+    .main-navbar .navbar-collapse {
+        background-color: #f3dfc3;
+        padding: 1rem 1.25rem;
+    }
+
+    .main-navbar .navbar-nav .nav-link {
+        padding-block: 0.6rem;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .main-navbar .navbar-nav .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-mobile {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 992px) {
+    .main-navbar .navbar-collapse {
+        background-color: transparent;
+    }
+}
+
+.logo-header {
+    height: 10vh;
+}
+
+h1 {
+    color: #38291b;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hero-pages {
+    background-color: #faf8f4;
+    padding: 60px;
+    text-align: center;
+    flex-direction: column;
+}
+
+.items-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 0;
+}
+
+.a-menu {
+    text-decoration: none;
+    color: rgb(21, 21, 21);
+    font-size: 16px;
+}
+
+.hero-home {
+    background-color: #e8d8c3;
+    border-radius: 12px;
+    min-height: 40vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-p {
+    color: rgb(36, 36, 36);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.hero-CTA {
+    background-color: rgb(250, 150, 0);
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 25px;
+}
+
+.propuesta {
+    background-color: #ffffff;
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+.img-hero-pages {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+}
+
+.propuesta-contenido {
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.experiencias {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+}
+
+.lista-experiencias {
+    padding: 1.8rem 1.5rem;
+    border-radius: 0.8rem;
+    background-color: #d97b14;
+    color: #000;
+}
+
+.img-hero-pages {
+    width: 400px;
+    border-radius: 24px;
+}
+
+.lista-experiencias {
+    background-color: #da7314;
+    border-radius: 6px;
+    margin: 20px;
+    padding: 2rem;
+}
+
+.bloque-secciones {
+    background-color: #dadada;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-secciones {
+    width: 500px;
+    border-radius: 12px;
+}
+
+.caja-habitaciones {
+    background-color: #da7314;
+    margin: 10px;
+    border-radius: 12px;
+}
+
+.fotos-resto {
+    width: 300px;
+    border-radius: 12px;
+}
+
+footer {
+    background-color: #f6e9d7;
+    display: grid;
+    ;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 20vh;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.social-icon {
+    height: 10vh;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+footer h3 {
+    text-align: center;
+    font-size: 1.2rem;
+}
