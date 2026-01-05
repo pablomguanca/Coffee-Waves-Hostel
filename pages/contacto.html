@@ -65,41 +65,65 @@
         </nav>
     </header>
     <main>
-        <h1>Reservá tu Estadía Frente al Mar</h1>
-        <p>Tu tabla, tu café, tu mundo.</p>
-        <img class="img-hero-pages" src="../assets/img/hostel_surfer.jpg" alt="Hostel Surfer">
-        <h2>Contactanos!</h2>
-        <section class="form">
-            <form action="#"></form>
-            <label for="nombre">Nombre</label>
-            <input type="text" placeholder="Garret">
-
-            <label for="Apellido">Apellido</label>
-            <input type="text" placeholder="McNamara">
-
-            <label for="celular">Celular</label>
-            <input type="number" placeholder="1123456789">
-
-            <label for="email">Email</label>
-            <input type="email" placeholder="garretmcnamara@mail.com">
-
-            <label for="perfil de instagram">Dejanos tu instagram</label>
-            <input type="url" placeholder="https://instagram.com/tu-perfil">
-
-            <label for="contraseña">Contraseña</label>
-            <input type="password" placeholder="tu contraseña">
-
-            <textarea placeholder="Escribí tu Mensaje acá"></textarea>
-            <input type="submit" value="Enviar">
-            <input type="reset" value="Reiniciar Formulario">
+        <section class="bloque-secciones">
+            <h1>Reservá tu Estadía Frente al Mar</h1>
+            <p>Tu tabla, tu café, tu mundo.</p>
         </section>
-        <section>
+        <section class="seccion-contacto">
+            <img class="img-contacto" src="../assets/img/hostel-vibes.webp" alt="Hostel Surfer">
+            <h2 class="k">Contactanos!</h2>
+            <div class="form-container l">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Garret">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="apellido">Apellido</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="McNamara">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="celular">Celular</label>
+                        <input type="tel" id="celular" name="celular" placeholder="1123456789">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="garretmcnamara@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="instagram">Dejanos tu instagram</label>
+                        <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/tu-perfil">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contrasena">Contraseña</label>
+                        <input type="password" id="contrasena" name="contrasena" placeholder="tu contraseña">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu Mensaje acá"></textarea>
+                    </div>
+
+                    <div class="form-buttons">
+                        <button type="submit" class="btn-submit">Enviar</button>
+                        <button type="reset" class="btn-reset">Reiniciar Formulario</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="bloque-mapa">
+            <h2>Encontranos en la mejor parte de la Costa Atlántica</h2>
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15061.236374952647!2d-57.558182522034386!3d-38.08252704871499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1762780324841!5m2!1ses!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="../index.html" class="hero-CTA">Volver al Inicio</a>
         </section>
-        <button class="hero-CTA"><a href="../index.html">Volver al Inicio</a></button>
     </main>
 
     <footer>

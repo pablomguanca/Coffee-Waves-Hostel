@@ -117,6 +117,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 2rem;
 }
 
 .hero-p {
@@ -125,20 +126,21 @@ h1 {
     font-size: 1.2em;
 }
 
-.hero-CTA {
+.hero-CTA,
+.resto-cta {
     background-color: rgb(250, 150, 0);
     color: #111111;
-    ;
-    text-decoration: none;
+    text-transform: uppercase;
     padding: 12px;
     border-radius: 25px;
-    border-color: #3e2723;
-    border-style: double;
+    border: 1px solid #3e2723;
     box-shadow: 0 2px 6px -1px #00000072;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem;
 }
 
-.hero-CTA:hover {
+.hero-CTA:hover,
+.resto-cta:hover {
     background-color: rgb(21, 21, 21);
     transform: scale(0.95);
     color: #f6f6f6;
@@ -229,6 +231,7 @@ details p {
     transform: scale(0.95);
 }
 
+/* Estilos para todas las páginas */
 .bloque-secciones {
     background-color: #dadada;
     min-height: 250px;
@@ -238,10 +241,8 @@ details p {
     align-items: center;
 }
 
-.img-secciones {
-    width: 500px;
-    border-radius: 12px;
-}
+
+/* Página Nosotros */
 
 .seccion-historia {
     height: 350px;
@@ -311,10 +312,7 @@ details p {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.hero-CTA {
-    margin-top: 1rem;
-}
-
+/*Página Hostel Surf */
 .levels-experiences {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -372,12 +370,19 @@ details p {
 }
 
 .rooms {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* 2 columnas iguales */
-    gap: 2rem;
+    background-color: rgb(248, 243, 236);
     padding: 3rem 2rem;
-    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 460px));
+    gap: 2rem;
+    justify-content: center;
     margin: 0 auto;
 }
 
@@ -388,10 +393,17 @@ details p {
 }
 
 .caja-habitaciones {
-    background: rgb(255, 229, 198);
+    background-color: #723700;
+    color: #ffffff;
     border-radius: 12px;
     padding: 2rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-habitaciones:hover {
+    background-color: #904601;
+    transform: scale(0.97);
 }
 
 .caja-habitaciones h3 {
@@ -416,9 +428,253 @@ details p {
     margin-top: 2rem;
 }
 
+.btn-reserva {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 12px;
+    border-radius: 25px;
+    border: 1px solid #ffffff;
+}
+
+.btn-reserva:hover {
+    background-color: #ff7b00;
+    color: #111111;
+    border: none;
+}
+
+/* Página Contacto */
+.seccion-contacto {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 2rem;
+    align-items: stretch;
+}
+
+.bloque-mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 3rem;
+}
+
+iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.33);
+    margin: 2rem;
+}
+
+.seccion-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "j k"
+        "j l";
+    justify-items: center;
+    padding: 3rem 2rem 3rem;
+    gap: 2rem;
+}
+
+.img-contacto {
+    grid-area: j;
+    width: 600px;
+    box-shadow: 1px 2px 4px #d4680461;
+    border-radius: 8px;
+}
+
+.seccion-contacto h2 {
+    grid-area: k;
+    color: #38291b;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form-container {
+    grid-area: l;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #161616;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #666;
+    padding: 10px 0;
+    color: #161616;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #c2c2c2;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: 2px solid #ff7b00;
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(255, 123, 0, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-submit,
+.btn-reset {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit {
+    background-color: #da7314;
+    color: #ffffff;
+}
+
+.btn-submit:hover {
+    background-color: #c46312;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(218, 115, 20, 0.3);
+}
+
+.btn-reset {
+    background-color: transparent;
+    border: 2px solid #787878;
+    color: #000000;
+}
+
+.btn-reset:hover {
+    background-color: #161616;
+    color: #ffffff;
+}
+
+/* Página Café-Restó */
+
+.seccion-resto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 3rem 4rem;
+    gap: 1rem;
+}
+
+.seccion-resto div {
+    max-width: 500px;
+}
+
+.coffee-vibes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    grid-template-areas:
+        "texto texto"
+        "fotos fotos";
+    justify-self: center;
+    text-align: center;
+}
+
+.texto-coffee {
+    grid-area: texto;
+    width: 80%;
+    justify-self: center;
+}
+
+.fotos-cafe {
+    grid-area: fotos;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    grid-template-areas:
+        "d e f"
+        "g h i"
+        "rcta rcta rcta";
+}
+
+.resto-cta {
+    grid-area: rcta;
+    justify-self: center;
+    max-width: 320px;
+}
+
+
+.d {
+    grid-area: d;
+}
+
+.e {
+    grid-area: e;
+}
+
+.f {
+    grid-area: f;
+}
+
+.g {
+    grid-area: g;
+}
+
+.h {
+    grid-area: h;
+}
+
+.i {
+    grid-area: i;
+}
+
 .fotos-resto {
     width: 300px;
     border-radius: 12px;
+    box-shadow: 0 4px 6px -1px #353535;
+    ;
+}
+
+.img-seccion-resto {
+    width: 600px;
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px #16161697;
 }
 
 footer {
@@ -453,7 +709,7 @@ footer h3 {
     font-size: 1.2rem;
 }
 
-@media (min-width: 431px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 1024px) {
     .experiencias {
         grid-template-columns: 1fr;
         width: 100%;
@@ -473,8 +729,6 @@ footer h3 {
     }
 
     .bloque-secciones {
-        display: flex;
-        flex-direction: column;
         text-align: center;
         padding: 1rem;
     }
@@ -502,19 +756,69 @@ footer h3 {
         width: 100%;
     }
 
-    .rooms {
-        grid-template-columns: 1fr;
+    .levels-experiences {
+        display: flex;
+        flex-direction: column;
+        max-width: 600px;
     }
-    
+
     .rooms h2,
     .rooms p,
     .rooms .hero-CTA {
         grid-column: 1;
+    }
+
+    .rooms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-contacto {
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas:
+        "k"
+        "l";
+    }
+
+    .img-contacto {
+        display: none;
+    }
+
+    .bloque-mapa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .seccion-resto {
+        grid-template-columns: 1fr;
+    }
+
+    iframe {
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .fotos-cafe {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "d e"
+            "f g"
+            "h i"
+            "rcta rcta";
     }
 }
 
 
-@media (min-width: 320px) and (max-width: 430px) {
+@media (min-width: 320px) and (max-width: 600px) {
     .experiencias {
         grid-template-columns: 1fr;
         width: 100%;
@@ -534,8 +838,6 @@ footer h3 {
     }
 
     .bloque-secciones {
-        display: flex;
-        flex-direction: column;
         text-align: center;
         padding: 1rem;
     }
@@ -562,14 +864,68 @@ footer h3 {
         width: 100%;
     }
 
-    .rooms {
+    .levels-experiences {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rooms-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .rooms h2,
     .rooms p,
     .rooms .hero-CTA {
         grid-column: 1;
     }
 
+        .seccion-contacto {
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas:
+        "k"
+        "l";
+    }
+
+    .img-contacto {
+        display: none;
+    }
+
+    .bloque-mapa {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        padding: 3rem 2rem;
+
+    }
+
+    .seccion-resto {
+        grid-template-columns: 1fr;
+    }
+    
+    .fotos-cafe {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "d"
+            "e"
+            "f"
+            "g"
+            "h"
+            "i"
+            "rcta";
+    }
+
+
+    iframe {
+        width: 100%;
+        margin: 0.5rem;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
 }
