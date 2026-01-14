@@ -1,0 +1,141 @@
+@use "variables" as v;
+
+.section-cafe-resto {
+    @include v.principal-section (v.$lightgrey, 250px, column, center, center, 1rem);
+
+    h1 {
+        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+
+        @include v.tablet {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+
+        @include v.mobile {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+    }
+    
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+}
+
+.seccion-resto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    padding: 3rem 4rem;
+    gap: 1rem;
+
+    @include v.tablet {
+        grid-template-columns: 1fr;
+    }
+
+    @include v.mobile {
+        grid-template-columns: 1fr;
+    }
+
+    div {
+        max-width: 500px;
+    }
+
+    .img-section {
+        @include v.img-section;
+    }
+}
+
+.coffee-vibes {
+    background-color: v.$secondarysection;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 3rem 0;
+    gap: 3rem;
+    grid-template-areas:
+        "texto"
+        "fotos"
+        "cta";
+    justify-items: center;
+    text-align: center;
+
+    .texto-coffee {
+        grid-area: texto;
+
+        h2 {
+            text-transform: uppercase;
+        }
+
+        p {
+            max-width: 800px;
+        }
+    }
+
+    .fotos-cafe {
+        grid-area: fotos;
+        width: 100%;
+        max-width: 1100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+        justify-items: center;
+        grid-template-areas:
+            "d e f"
+            "g h i";
+
+        @include v.tablet {
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 700px;
+            grid-template-areas:
+                "d e"
+                "f g"
+                "h i"
+                "cta cta";
+        }
+
+        @include v.mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "d"
+                "e"
+                "f"
+                "g"
+                "h"
+                "i"
+                "cta";
+        }
+
+        .d {
+            grid-area: d;
+        }
+
+        .e {
+            grid-area: e;
+        }
+
+        .f {
+            grid-area: f;
+        }
+
+        .g {
+            grid-area: g;
+        }
+
+        .h {
+            grid-area: h;
+        }
+
+        .i {
+            grid-area: i;
+        }
+
+        .fotos-resto {
+            @include v.img-section ($mw: 300px);
+        }
+
+        .btn-cta {
+            @extend %btn-cta;
+            grid-area: cta;
+        }
+    }
+}

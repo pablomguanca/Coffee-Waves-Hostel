@@ -1,0 +1,120 @@
+@use "variables" as v;
+
+.section-contacto {
+    @include v.principal-section(v.$lightgrey, 250px, column, center, center, 1rem);
+
+    h1 {
+        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+
+        @include v.tablet {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+
+        @include v.mobile {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+}
+
+.section-form {
+    display: grid;
+    background-color: v.$white;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "foto titulo"
+        "foto form";
+    align-items: center;
+    justify-items: center;
+    padding: auto;
+
+    .img-contacto {
+        grid-area: foto;
+        width: 100%;
+        display: block;
+        min-height: 500px;
+        border-radius: 8px;
+        object-fit: cover;
+        margin: 2rem;
+        box-shadow: 1px 2px 4px v.$bordershadow;
+    }
+
+    .k {
+        grid-area: titulo;
+        @include v.h1(v.$emphasiscolor, 2rem, center, uppercase);
+        margin-top: 2rem;
+        width: 100%;
+        align-self: end;
+    }
+
+    .form-container {
+        grid-area: form;
+        width: 100%;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+
+        .contact-form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+
+            @extend %formulario-surfer;
+        }
+    }
+
+    @include v.tablet {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "form"
+            "foto";
+
+        .img-contacto {
+            height: 300px;
+            margin: 1rem;
+        }
+    }
+
+    @include v.mobile {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "titulo"
+            "form";
+
+        .img-contacto {
+            display: none;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 1rem;
+        }
+    }
+}
+
+.bloque-mapa {
+    @include v.flex (column, center, center);
+    padding: 1rem 0.5rem;
+
+    iframe {
+        border-radius: 12px;
+        box-shadow: 0 4px 12px v.$bordershadow;
+        margin: 2rem;
+
+        @include v.tablet {
+            width: 100%;
+        }
+
+        @include v.mobile {
+            width: 100%;
+        }
+    }
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head (Metadatos-enlaces) No es visible en la interfaz-->
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/logo/favicon_surfer.webp" type="image/x-icon">
     <title>Café & Restó - Coffee & Waves Hostel Surf</title>
 </head>
-<!-- Fin de Head -->
-<!-- Body es todo lo visible: Header-main-footer-->
+
 <body>
     <header class="sticky-header">
         <nav class="navbar navbar-expand-lg main-navbar">
@@ -65,7 +64,7 @@
     </header>
     <main>
 
-        <section class="bloque-secciones">
+        <section class="principal-section section-cafe-resto">
             <h1>Café y Restó</h1>
             <p>Vení a disfrutar de nuestra cafertería de especialidad por los mejores baristas de la región</p>
         </section>
@@ -77,28 +76,25 @@
                 <p>Si sólo estás de paso podés disfrutar de nuestra cafetería sin hospedarte en nuestro hostel. No te
                     pierdas esta experiencia increíble de sabores con aires de comunidad.</p>
             </div>
-            <img class="img-seccion-resto" src="../assets/img/coffe-waves-hostel.jpg"
-                alt="Hostel Surfer Coffee & Waves">
+            <img class="img-section" src="../assets/img/coffe-waves-hostel.jpg" alt="Hostel Surfer Coffee & Waves">
         </section>
         <section class="coffee-vibes">
             <div class="texto-coffee">
-                <h2>Café de Especialidad</h2>
-                <p>En "Coffee & Waves", nuestro café es más que una pausa con amigos. Tenemos los mejores baristas y eso
-                    se
-                    nota en cada taza de café.</p>
                 <h2>Disfrutá del Restó Surfer Experience</h2>
-                <p>Más que un restó atlántico, somos un punto de encuentro. Disfrutá de nuestra variedad de café de
+                <p>Más que un restó atlántico, "Coffe Waves" es el punto de encuentro más elegido por surfers y
+                    viajeros. Disfrutá de nuestra variedad de café de
                     especialidad con el arte latte justo e inspirado en las olas más lindas del lugar.</p>
             </div>
             <div class="fotos-cafe">
-            <img class="fotos-resto d" src="../assets/img/taza-coffee.webp" alt="taza de cafe">
-            <img class="fotos-resto e" src="../assets/img/taza_ola.webp" alt="taza de vidrio de cafe">
-            <img class="fotos-resto f" src="../assets/img/barista_cafe.webp" alt="mujer barista">
-            <img class="fotos-resto g" src="../assets/img/vaso_cafe.webp" alt="vaso de cafe">
-            <img class="fotos-resto h" src="../assets/img/cafe-negro-.webp" alt="cafe negro">
-            <img class="fotos-resto i" src="../assets/img/taza-cafe-latte-.webp" alt="cafe latte">
-            <a href="../index.html" class="resto-cta">Volver al Inicio</a>
-            </div>
+                <img data-aos="fade-up" class="fotos-resto d" src="../assets/img/taza-coffee.webp" alt="taza de cafe">
+                <img data-aos="fade-down" class="fotos-resto e" src="../assets/img/taza_ola.webp"
+                    alt="taza de vidrio de cafe">
+                <img data-aos="fade-up" class="fotos-resto f" src="../assets/img/barista_cafe.webp" alt="mujer barista">
+                <img data-aos="fade-up" class="fotos-resto g" src="../assets/img/vaso_cafe.webp" alt="vaso de cafe">
+                <img data-aos="fade-down" class="fotos-resto h" src="../assets/img/cafe-negro-.webp" alt="cafe negro">
+                <img data-aos="fade-up" class="fotos-resto i" src="../assets/img/taza-cafe-latte-.webp"
+                    alt="cafe latte">
+            </div><a href="../index.html" class="btn-cta">Volver al Inicio</a>
         </section>
     </main>
     <footer>
@@ -127,6 +123,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

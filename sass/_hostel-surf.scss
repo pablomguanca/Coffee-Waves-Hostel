@@ -1,0 +1,144 @@
+@use "variables" as v;
+
+.section-hostel {
+    @include v.principal-section (v.$lightgrey, 250px, column, center, center, 1rem);
+
+    h1 {
+        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+
+        @include v.tablet {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+
+        @include v.mobile {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+}
+
+.levels-experiences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    @include v.tablet {
+        grid-template-columns: 1fr;
+    }
+
+    @include v.mobile {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        grid-column: 1 / -1;
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .experience-card {
+        @extend %experience-card;
+
+        h3 {
+            background-color: v.$primarycolor;
+            color: v.$white;
+            padding: 1.5rem;
+            margin: 0;
+        }
+
+        p {
+            background: v.$white;
+            padding: 1.5rem;
+            margin: 0;
+            line-height: 1.6;
+            flex-grow: 1
+        }
+    }
+
+    .img-section {
+        @include v.img-section($mw: 700px);
+        grid-column: 1/-1;
+        margin-top: 2rem;
+        justify-self: center;
+    }
+}
+
+.rooms {
+    @include v.flex (column, center, center);
+    background-color: v.$secondarysection;
+    padding: 3rem 2rem;
+    text-align: center;
+    gap: 1rem;
+
+    .rooms-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(300px, 460px));
+        gap: 2rem;
+        justify-content: center;
+        margin: 0 auto;
+
+        @include v.tablet {
+            grid-template-columns: 1fr;
+            grid-column: 1;
+        }
+
+        @include v.mobile {
+            grid-template-columns: 1fr;
+            grid-column: 1;
+        }
+
+        .caja-habitaciones {
+            @extend %caja-habitaciones;
+
+            &:hover {
+                background-color: v.$brown;
+                transform: scale(0.97);
+            }
+
+            h3 {
+                color: v.$orange;
+                font-size: 1.5rem;
+                margin-bottom: 1rem;
+            }
+
+
+            ul {
+                list-style: none;
+                padding: 0;
+
+                li {
+                    padding: 0.5rem 0;
+                    line-height: 1.5;
+                    margin: 0 15px;
+                }
+            }
+
+            .btn-reserva {
+                color: v.$white;
+                text-transform: uppercase;
+                padding: 12px;
+                border-radius: 24px;
+                border: 1px solid v.$white;
+                text-decoration: none;
+
+                &:hover {
+                    background-color: v.$orange;
+                    color: v.$text;
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.btn-cta {
+    @extend %btn-cta;
+}

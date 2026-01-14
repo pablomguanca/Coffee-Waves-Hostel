@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+$primarycolor: #da7314;
+$orange: #ff8819;
+$lightpink: #f6e9d7;
+$emphasiscolor: #38291b;
+$bordershadow: rgba(0, 0, 0, 0.4);
+$softshadow: #353535;
+$middlepink: #f3dfc3;
+$primarysection: #e8d8c3;
+$secondarysection: #f3f3f3;
+$text: rgb(36, 36, 36);
+$subtitle: #813e00;
+$brown: #904601;
+$font-surfer: 'Original Surfer';
+$white: #FFFFFF;
+$lightgrey: #dadada;
+$darkgrey: #c0c0c0;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-surfer;
+}
+
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 320px) and (max-width: 599px) {
+        @content;
+    }
+}
+
+@mixin flex ($fd, $jc, $ai) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin h1 ($c, $fs, $ta, $tt) {
+    color: $c;
+    font-size: $fs;
+    text-align: $ta;
+    text-transform: $tt;
+}
+
+@mixin principal-section ($bg, $mh, $fd, $jc, $ai, $p) {
+    display: flex;
+    background-color: $bg;
+    min-height: $mh;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+    padding: $p;
+}
+
+@mixin img-section ($mw: 800px, $br: 12px, $bs: 0 4px 12px $bordershadow) {
+    display: block;
+    width: 100%;
+    max-width: $mw;
+    height: auto;
+    border-radius: $br;
+    box-shadow: $bs;
+}
+
+%btn-cta {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    margin: 1rem;
+    background-color: $orange;
+    color: $text;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    border: 1px solid $bordershadow;
+    box-shadow: 0 2px 6px -1px $text;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+%btn-cta:hover {
+    transform: scale(0.95);
+    background-color: $text;
+    color: $secondarysection;
+}
+
+%card-experiencias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primarycolor;
+    color: $emphasiscolor;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px -1px $softshadow;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    gap: 10px;
+}
+
+%experience-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px $bordershadow;
+    border-radius: 12px;
+}
+
+%caja-habitaciones {
+    background-color: $subtitle;
+    color: $white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px $darkgrey;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+%formulario-surfer {
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        label {
+            color: $text;
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $darkgrey;
+            padding: 10px 0;
+            color: $text;
+            font-size: 16px;
+            transition: all 0.3s ease;
+
+            &::placeholder {
+                color: $bordershadow;
+            }
+
+            &:focus {
+                outline-offset: 0;
+                border-bottom: 1px solid $text;
+            }
+        }
+    }
+
+    .form-buttons {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1rem;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    .btn-submit {
+        flex: 1;
+        padding: 14px;
+        background-color: $orange;
+        color: $white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+
+        &:hover {
+            background-color: $orange;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px $bordershadow;
+        }
+    }
+
+    .btn-reset {
+        flex: 1;
+        padding: 14px;
+        background-color: transparent;
+        border: 2px solid $darkgrey;
+        color: $text;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            background-color: $text;
+            color: $white;
+        }
+    }
+}

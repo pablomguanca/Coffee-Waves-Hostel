@@ -1,0 +1,120 @@
+@use "variables" as v;
+
+.hero-home {
+    @include v.flex (column, center, center);
+    background-color: v.$primarysection;
+    min-height: 40vh;
+    padding: 1rem 2rem;
+
+    h1 {
+        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+    }
+
+    p {
+        color: v.$text;
+        text-align: center;
+        font-size: 1.2em;
+
+    }
+}
+
+.seccion-propuesta {
+    @include v.flex (column, center, center);
+    padding: 3rem 2rem;
+    gap: 1rem;
+    text-align: center;
+    font-size: 1rem;
+
+    .img-section {
+        @include v.img-section ($mw: 600px);
+    }
+
+    .acordeon-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        @include v.tablet {
+            grid-template-columns: 1fr;
+            width: 100%;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        @include v.mobile {
+            grid-template-columns: 1fr;
+            width: 100%;
+
+            p {
+                text-align: center;
+            }
+        }
+
+        summary {
+            font-size: 1.6rem;
+            color: v.$subtitle;
+        }
+
+        p {
+            font-size: 1rem;
+            color: v.$emphasiscolor;
+        }
+    }
+}
+
+.seccion-mood {
+    @include v.principal-section (v.$secondarysection, 0, column, center, center, 2rem);
+    text-align: center;
+    gap: 0.5rem;
+
+    .experiencias {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        padding: 1rem;
+        margin-bottom: 3rem;
+
+        @include v.tablet {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        @include v.mobile {
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+
+        .card-experiencias {
+            @extend %card-experiencias;
+
+            &:hover {
+                background-color: v.$orange;
+                transform: scale(0.95);
+            }
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        p {
+            margin: 0;
+            font-size: 1rem;
+        }
+    }
+
+    .btn-cta {
+        @extend %btn-cta;
+        font-size: 0.8rem;
+    }
+
+    @include v.mobile {
+        h2 {
+            font-size: 1.5rem;
+        }
+    }
+}

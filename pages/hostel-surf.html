@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Head (Metadatos-enlaces) No es visible en la interfaz-->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="shortcut icon" href="../assets/logo/favicon_surfer.webp" type="image/x-icon">
     <title>Habitaciones y Surf Experience - Coffee & Waves Hostel Surf</title>
@@ -63,7 +63,7 @@
         </nav>
     </header>
     <main>
-        <section class="bloque-secciones">
+        <section class="principal-section section-hostel">
             <h1>Habitaciones y Experiencia Surf</h1>
             <p>Armá tu estadía como quieras, disponemos de una variedad de propuestas para que elijas la que mejor
                 se adapte a tu recorrido.</p>
@@ -88,7 +88,7 @@
                     incluida y acceso vip a nuestros eventos.
                 </p>
             </div>
-            <img class="img-secciones" src="../assets/img/surf-2.jpg" alt="surfers con tablas">
+            <img class="img-section" src="../assets/img/surf-2.jpg" alt="surfers con tablas">
         </section>
         <section class="rooms">
             <h2>Armá tu Experiencia Personalizada</h2>
@@ -136,7 +136,7 @@
                     <a href="./contacto.html" class="btn-reserva">Ver más</a>
                 </article>
             </div>
-            <a href="../index.html" class="hero-CTA">Volver al Inicio</a>
+            <a href="../index.html" class="btn-cta">Volver al Inicio</a>
         </section>
     </main>
 
@@ -166,6 +166,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+            AOS.init();
+    </script>
 </body>
 
 </html>

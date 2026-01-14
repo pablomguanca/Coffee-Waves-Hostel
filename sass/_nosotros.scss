@@ -1,0 +1,101 @@
+@use "variables" as v;
+
+.section-nosotros {
+    @include v.principal-section(v.$lightgrey, 250px, column, center, center, 1rem);
+
+    h1 {
+        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+
+        @include v.tablet {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+
+        @include v.mobile {
+            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.2em;
+    }
+}
+
+.seccion-historia {
+    @include v.flex (row, space-around, center);
+    height: 350px;
+    background-color: v.$darkgrey;
+    padding: 3rem 4rem;
+    gap: 20px;
+
+    @include v.tablet {
+        @include v.flex (column, center, center);
+        height: auto;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    @include v.mobile {
+        @include v.flex (column, center, center);
+        height: auto;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+
+    div {
+        max-width: 600px;
+
+        h2 {
+            font-weight: bold;
+            font-size: 2rem;
+            text-decoration: underline;
+        }
+    }
+
+    .img-section {
+        @include v.img-section ($mw: 500px);
+    }
+
+}
+
+.bloque-about {
+    @include v.flex (column, center, center);
+    background-color: v.$secondarysection;
+    padding: 3rem 2rem;
+    gap: 2rem;
+
+    .texto-about {
+        max-width: 800px;
+        text-align: left;
+
+        @include v.tablet {
+            text-align: center;
+        }
+
+        @include v.mobile {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 2rem 1rem;
+            font-size: 1.8rem;
+        }
+
+        h2:first-of-type {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+    }
+
+    .img-section {
+        @include v.img-section;
+    }
+
+    .btn-cta {
+        @extend %btn-cta;
+    }
+}
