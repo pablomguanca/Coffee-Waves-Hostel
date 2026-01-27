@@ -4,14 +4,14 @@
     @include v.principal-section (v.$lightgrey, 250px, column, center, center, 1rem);
 
     h1 {
-        @include v.h1 (v.$emphasiscolor, 2.5rem, center, uppercase);
+        @include v.title (v.$emphasiscolor, 2.5rem, center, uppercase);
 
         @include v.tablet {
-            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+            @include v.title (v.$emphasiscolor, 2rem, center, uppercase)
         }
 
         @include v.mobile {
-            @include v.h1 (v.$emphasiscolor, 2rem, center, uppercase)
+            @include v.title (v.$emphasiscolor, 2rem, center, uppercase)
         }
     }
     
@@ -31,10 +31,12 @@
 
     @include v.tablet {
         grid-template-columns: 1fr;
+        padding: 1rem 2rem;
     }
 
     @include v.mobile {
         grid-template-columns: 1fr;
+        padding: 1rem 2rem;
     }
 
     div {

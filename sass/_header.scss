@@ -13,7 +13,7 @@
 
         .navbar-mobile {
             margin: 0.2rem 3.5rem;
-            
+
             @include v.tablet {
                 margin: auto;
             }
@@ -36,15 +36,62 @@
             .navbar-collapse {
                 max-width: 1100px;
                 margin: auto;
+
+                ul {
+                    gap: 15px;
+                }
             }
         }
 
         .navbar-nav {
+
+            @include v.tablet {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+
+            @include v.mobile {
+                display: block;
+                text-transform: uppercase;
+                letter-spacing: 0.1rem;
+            }
+
             .nav-link {
                 font-size: 1rem;
                 color: v.$emphasiscolor;
                 padding: 0.5rem 1.8rem;
                 gap: 1rem;
+
+                &:hover {
+                    color: v.$subtitle;
+                    font-weight: 700;
+                }
+
+                &.active {
+                    color: v.$subtitle;
+                    font-weight: 700;
+                }
+
+                @include v.tablet {
+
+                    &.active {
+                        background-color: v.$brown;
+                        color: v.$white;
+                        border: 1px solid v.$orange;
+                        border-radius: 25px;
+                    }
+                }
+
+                @include v.mobile {
+
+                    &.active {
+                        background-color: v.$brown;
+                        color: v.$white;
+                        border: 1px solid v.$orange;
+                        border-radius: 25px;
+                    }
+                }
             }
         }
     }
