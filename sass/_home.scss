@@ -1,11 +1,11 @@
 @use "variables" as v;
 
 .hero-home {
-    @include v.flex (row, space-around, center);
-    height: 400px;
+    @include v.flex (row, space-evenly, center);
+    height: 450px;
     background-color: v.$primarysection;
     text-align: center;
-    padding: 3rem 4rem;
+    padding: 2rem;
     gap: 20px;
 
     @include v.tablet {
@@ -37,7 +37,7 @@
     }
 
     .img-section {
-        @include v.img-section ($mw: 500px);
+        @include v.img-section ($mw: 600px);
 
         @include v.tablet {
             @include v.img-section ($mw: 500px);
@@ -76,9 +76,10 @@ h2 {
     .experiencias {
         display: grid;
         margin: 0 4rem;
+        max-width: 1200px;
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
-        padding: 1rem;
+        padding: 2rem;
         margin-bottom: 3rem;
 
         a {
@@ -88,7 +89,7 @@ h2 {
 
         @include v.tablet {
             grid-template-columns: 1fr;
-            width: 100%;
+            margin: 1rem 2rem;
         }
 
         @include v.mobile {
@@ -100,26 +101,26 @@ h2 {
             @extend %card-experiencias;
 
             &:hover {
-                background-color: v.$orange;
+                background-color: v.$orange-hover;
                 transform: scale(0.95);
             }
         }
 
         h3 {
-            margin: 0;
+            margin: 5px;
             font-size: 1.5rem;
             font-weight: bold;
         }
 
         p {
-            margin: 0;
+            margin: 15px;
             font-size: 1rem;
         }
     }
 
     .btn-cta {
         @extend %btn-cta;
-        font-size: 0.8rem;
+        font-size: 1.2rem;
     }
 
     @include v.mobile {
