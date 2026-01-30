@@ -95,10 +95,16 @@ h2 {
         @include v.mobile {
             grid-template-columns: 1fr;
             width: 100%;
+            padding: 1rem 0;
         }
 
         .card-experiencias {
             @extend %card-experiencias;
+            padding: 2rem 1rem;
+
+            @include v.mobile {
+                padding: 1rem 0.5rem;
+            }
 
             &:hover {
                 background-color: v.$orange-hover;

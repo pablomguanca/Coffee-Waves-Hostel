@@ -39,7 +39,6 @@
   text-align: center;
   border: 1px solid #904601;
   border-radius: 8px;
-  padding: 2rem 1rem;
   box-sizing: border-box;
   box-shadow: 0 4px 6px -1px #353535;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -409,6 +408,15 @@ h2 {
   .seccion-mood .experiencias {
     grid-template-columns: 1fr;
     width: 100%;
+    padding: 1rem 0;
+  }
+}
+.seccion-mood .experiencias .card-experiencias {
+  padding: 2rem 1rem;
+}
+@media (min-width: 320px) and (max-width: 599px) {
+  .seccion-mood .experiencias .card-experiencias {
+    padding: 1rem 0.5rem;
   }
 }
 .seccion-mood .experiencias .card-experiencias:hover {
