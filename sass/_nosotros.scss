@@ -22,8 +22,8 @@
 }
 
 .seccion-historia {
-    @include v.flex (row, space-around, center);
-    height: 350px;
+    @include v.flex (row, space-evenly, center);
+    height: 100%;
     background-color: v.$darkgrey;
     padding: 3rem 4rem;
     gap: 20px;
@@ -46,9 +46,9 @@
         max-width: 600px;
 
         h2 {
+            margin-bottom: 1rem;
             font-weight: bold;
             font-size: 2rem;
-            text-decoration: underline;
         }
     }
 
